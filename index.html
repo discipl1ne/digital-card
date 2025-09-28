@@ -115,10 +115,7 @@
       confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
       launchBalloons();
       typeWriter();
-      music.play().catch(() => {
-        // Autoplay blocked
-        musicToggle.textContent = "Click to Play Music 🎵";
-      });
+      music.play();
     };
 
     // 🎈 Floating balloons
@@ -159,7 +156,7 @@
     musicToggle.addEventListener("click", () => {
       if (isPlaying) {
         music.pause();
-        musicToggle.textContent = "Play Music 🎵";
+        musicToggle.textContent = "Click to Play Music 🎵";
       } else {
         music.play();
         musicToggle.textContent = "Pause Music ⏸️";
