@@ -9,22 +9,23 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 </head>
 <body class="relative overflow-x-hidden">
-  <nav class="bg-[#FFFFFF] w-full p-4 flex items-center justify-between font-sans">
-    <!-- Left: Logo + Title -->
-    <div class="flex items-center">
-      <img src="images/narutorunning.gif" alt="logo" class="h-10 w-10 mr-2"/>
-      <a id="typewriter" href="index.html" class="text-black text-md md:text-xl font-bold whitespace-nowrap"></a>
-    </div>
-    <!-- Right: Controls -->
-    <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
-  <button id="shuffleBtn" class="bg-[#12a1d1] text-white px-4 py-2 rounded shadow hover:bg-[#0e7ea8] transition w-full sm:w-auto">
-    Shuffle Notes 🎲
-  </button>
-  <button id="musicToggle" class="bg-[#12a1d1] text-white px-4 py-2 rounded shadow hover:bg-[#0e7ea8] transition w-full sm:w-auto">
-    Play Music 🎵
-  </button>
-</div>
-  </nav>
+  <nav class="bg-[#FFFFFF] w-full p-4 font-sans flex flex-col items-center">
+  <!-- Header -->
+  <div class="flex items-center mb-3">
+    <img src="images/narutorunning.gif" alt="logo" class="h-10 w-10 mr-2"/>
+    <a id="typewriter" href="index.html" class="text-black text-md md:text-xl font-bold whitespace-nowrap"></a>
+  </div>
+
+  <!-- Buttons -->
+  <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+    <button id="shuffleBtn" class="bg-[#12a1d1] text-white px-4 py-2 rounded shadow hover:bg-[#0e7ea8] transition w-full sm:w-auto">
+      Shuffle Notes 🎲
+    </button>
+    <button id="musicToggle" class="bg-[#12a1d1] text-white px-4 py-2 rounded shadow hover:bg-[#0e7ea8] transition w-full sm:w-auto">
+      Play Music 🎵
+    </button>
+  </div>
+</nav>
 
   <!-- Balloons Container -->
   <div id="balloons" class="pointer-events-none absolute inset-0 z-0"></div>
