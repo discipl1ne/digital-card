@@ -106,7 +106,10 @@
       confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
       launchBalloons();
       typeWriter();
-      music.play(); // force play on load
+      music.play().catch(() => {
+        // Autoplay blocked
+        musicToggle.textContent = "Click to Play Music 🎵";
+      });
     };
 
     // 🎈 Floating balloons
