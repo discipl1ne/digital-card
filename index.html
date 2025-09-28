@@ -115,6 +115,11 @@
       confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
       launchBalloons();
       typeWriter();
+      // Attempt to play music
+      music.play().catch(() => {
+      // Autoplay blocked
+      musicToggle.textContent = "Click to Play Music 🎵";
+  });
     };
 
     // 🎈 Floating balloons
@@ -137,6 +142,14 @@
     `;
     document.head.appendChild(style);
 
+    document.body.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    musicToggle.textContent = "Pause Music ⏸️";
+  }
+}, { once: true }); // only need the first click
+
+
     // ⌨️ Typewriter effect
     const text = "Happy 33rd to Justin Chen!";
     let i = 0;
@@ -155,7 +168,7 @@
     musicToggle.addEventListener("click", () => {
       if (isPlaying) {
         music.pause();
-        musicToggle.textContent = "Click to Play Music 🎵";
+        musicToggle.textContent = "Play Music 🎵";
       } else {
         music.play();
         musicToggle.textContent = "Pause Music ⏸️";
