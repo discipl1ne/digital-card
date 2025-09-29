@@ -11,7 +11,9 @@
 <body class="relative overflow-x-hidden">
   <nav class="bg-[#FFFFFF] w-full p-4 font-sans flex flex-col items-center">
   <!-- Header -->
-  <div class="flex items-center mb-3">
+      <div class="w-full max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between">
+
+  <div class=" flex items-center mb-3">
     <img src="images/narutorunning.gif" alt="logo" class="h-10 w-10 mr-2"/>
     <a id="typewriter" href="index.html" class="text-black text-md md:text-xl font-bold whitespace-nowrap"></a>
   </div>
@@ -24,6 +26,8 @@
     <button id="musicToggle" class="bg-[#12a1d1] text-white px-4 py-2 rounded shadow hover:bg-[#0e7ea8] transition w-full sm:w-auto">
       Play Music 🎵
     </button>
+        </div>
+
   </div>
 </nav>
 
@@ -31,7 +35,7 @@
   <div id="balloons" class="pointer-events-none absolute inset-0 z-0"></div>
 
   <section class="bg-[url('images/onepiecebackgorund.jpg')] bg-cover bg-center flex flex-col items-center justify-center min-h-screen p-8 relative z-10">
-    <div id="messages" class="columns-1 sm:columns-2 lg:columns-3 gap-6 w-11/12 max-w-6xl mx-auto mt-12">
+<div id="messages" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-11/12 max-w-6xl mx-auto mt-12">
       
       <div class="mb-6 p-6 bg-white bg-opacity-95 shadow-lg rounded-xl break-inside-avoid transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
         <p>Happy birthday Justin 🎉</p>
